@@ -8,12 +8,9 @@ class Solution:
         # z is a 1D NumPy array
         # Formula: 1 / (1 + e^(-z))
         # return np.round(your_answer, 5)
-        z_clipped = np.clip(z, -500, 500)
-        result = 1 / (1 + np.exp(-z_clipped))
-        return np.round(result, 5)
+        return np.round(1 / (1 + np.exp(-z)), 5)
 
     def relu(self, z: NDArray[np.float64]) -> NDArray[np.float64]:
         # z is a 1D NumPy array
         # Formula: max(0, z) element-wise
-        ans = np.maximum(0, z)
-        return ans
+        return np.maximum(0, z)
